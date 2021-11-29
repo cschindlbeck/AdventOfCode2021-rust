@@ -1,0 +1,28 @@
+version: '3.2'
+
+services: 
+  rust:
+    image: rust-app
+    build:
+      context: ../
+      dockerfile: .docker/Dockerfile
+      #environment:
+      #- TZ=Europe/Berlin
+      #- DEBIAN_FRONTEND=noninteractive
+    container_name: rust
+    #hostname: ros
+    tty: true
+    stdin_open: true
+    #privileged: true
+    #environment:
+    #- DISPLAY=$DISPLAY
+    #volumes:
+    #- /tmp/.X11-unix:/tmp/.X11-unix
+    #- ~/.Xauthority:/root/.Xauthority
+    #- type: bind
+    #source: ../
+    #target: /arm_base_ws/
+        #read_only: true
+        #network_mode: host
+
+
