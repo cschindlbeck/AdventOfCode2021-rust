@@ -16,13 +16,11 @@ services:
     #privileged: true
     #environment:
     #- DISPLAY=$DISPLAY
-    #volumes:
-    #- /tmp/.X11-unix:/tmp/.X11-unix
-    #- ~/.Xauthority:/root/.Xauthority
-    #- type: bind
-    #source: ../
-    #target: /arm_base_ws/
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+      - type: bind
+        source: ../
+        target: /rust/
         #read_only: true
-        #network_mode: host
-
-
+    network_mode: host
