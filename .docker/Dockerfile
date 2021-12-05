@@ -1,4 +1,4 @@
-FROM rust:1.31
+FROM rust:1.57
 
 # Install missing packages in ubuntu docker container
 RUN apt-get update && apt-get install -y --no-install-recommends \
