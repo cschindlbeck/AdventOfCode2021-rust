@@ -1,3 +1,6 @@
+use std::io;
+
 fn main() {
-    println!("Hello, world!");
+    let guess: i8 = 3;
+    println!("Hello, world {}!", guess);
 }
