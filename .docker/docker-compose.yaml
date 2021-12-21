@@ -13,6 +13,8 @@ services:
     #hostname: ros
     tty: true
     stdin_open: true
+    user: 1000:1000
+    working_dir: /home/chris/rust
     #privileged: true
     #environment:
     #- DISPLAY=$DISPLAY
@@ -21,6 +23,6 @@ services:
       - ~/.Xauthority:/root/.Xauthority
       - type: bind
         source: ../
-        target: /rust/
+        target: /home/chris/rust/
         #read_only: true
     network_mode: host

@@ -6,8 +6,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean all \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /rust
+RUN useradd -ms /bin/bash chris
+WORKDIR /home/chris/rust
 COPY . .
+
 
 #RUN cargo install --path .
 
