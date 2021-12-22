@@ -15,16 +15,18 @@ fn main() {
 
     let mut prev_meas: i64 = std::i64::MAX;
     let mut counter = 0;
-    for v in vec{
-        if v > prev_meas{
+    let ind: usize = vec.len();
+    for indx in 0..ind-2{
+        let sliding_window: i64 = vec[indx] + vec[indx+1] + vec[indx+2];
+        if  sliding_window>prev_meas{
             counter = counter + 1;
         }
-        prev_meas = v;
+        prev_meas = sliding_window;
+
+        // println!("With text{}  {}  {}", indx, vec[indx], sliding_window);
     }
         
     println!("Result: {}", counter);
-
-
 
 
 }
