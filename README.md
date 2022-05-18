@@ -6,5 +6,5 @@ Learning rust by solving AoC 2021
 
 ```sh
 cd .docker
-docker-compuse run rust
+docker-compose run rust
 ```
