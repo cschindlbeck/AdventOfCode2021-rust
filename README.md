@@ -8,3 +8,20 @@ Learning rust by solving AoC 2021
 cd .docker
 docker-compose run rust
 ```
+
+# Compile 
+
+Either use 
+
+```sh
+rustc main.rs
+```
+
+or for larger projects
+
+```sh
+cargo run
+```
+
+in the folder
+
