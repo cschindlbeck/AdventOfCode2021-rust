@@ -1,7 +1,7 @@
 use std::fs;
 
 struct Board {
-    state: Vec<Vec<u16>> 
+    state: Vec<Vec<u16>>,
 }
 
 impl Board {
@@ -22,11 +22,9 @@ impl Board {
 }
 
 fn main() {
-
     let filename: &str = "src/test.txt";
     let contents: String =
-        fs::read_to_string(filename)
-            .expect("Something went wrong reading the file");
+        fs::read_to_string(filename).expect("Something went wrong reading the file");
     let lines: Vec<&str> = contents.split("\n\n").collect();
 
     // println!("Result {:?}", lines[0]);
@@ -43,13 +41,10 @@ fn main() {
     // board1.read_to_board(5u16);
     // println!("{:?}", board1.state);
     // // board1.state[0][0] = 1;
-    // // 
+    // //
 
     // draw numbers
     // for l in lines[0].split(","){
     //     println!("{:?}", l.parse::<u16>().unwrap());
     // }
-
-
-
 }
